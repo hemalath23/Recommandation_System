@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Recommendations</title>
+</head>
+<body>
+    <h1>Top Recommended Products</h1>
+    <ul>
+        {% for product in products %}
+            <li>{{ product.prod_id }} - 
+                {% if product.average_rating %} 
+                    Average Rating: {{ product.average_rating }} 
+                {% else %} 
+                    No Rating 
+                {% endif %}
+                ({% if product.rating_count %} 
+                    {{ product.rating_count }} ratings 
+                {% else %} 
+                    No Ratings 
+                {% endif %}
+                )
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

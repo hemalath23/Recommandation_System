@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Recommendations</title>
+</head>
+<body>
+    <h1>Product Recommendations</h1>
+    <form action="{% url 'user_recommendations' 0 %}" method="get">
+        <label for="user_id">Enter User ID:</label>
+        <input type="number" id="user_id" name="user_id" required>
+        <input type="submit" value="Get Recommendations">
+    </form>
+</body>
+</html>
